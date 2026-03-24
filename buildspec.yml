@@ -9,10 +9,10 @@ phases:
   build:
     commands:
       - echo Build started
-      - docker build -t match-3 .
-      - docker tag match-3:latest $ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/match-3:latest
+      - docker build -t match3-game .
+      - docker tag match3-game:latest $ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/match-3:latest
 
   post_build:
     commands:
       - echo Pushing image
-      - docker push $ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/match-3:latest
+      - docker push $ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/match3-game:latest
