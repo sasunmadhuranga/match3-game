@@ -2,7 +2,6 @@ export const findMatches = (board) => {
   const matches = [];
   const size = board.length;
 
-  // Horizontal
   for (let r = 0; r < size; r++) {
     let streak = 1;
 
@@ -25,7 +24,6 @@ export const findMatches = (board) => {
     }
   }
 
-  // Vertical
   for (let c = 0; c < size; c++) {
     let streak = 1;
 

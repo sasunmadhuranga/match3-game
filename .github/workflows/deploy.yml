@@ -26,7 +26,10 @@ jobs:
         run: docker build -t match3-game .
 
       - name: Login to ECR
-        run: aws ecr get-login-password | docker login --username AWS --password-stdin $ECR_REPOSITORY
+        run: |
+          ECR_REGISTRY=$(echo $ECR_REPOSITORY | cut -d/ -f1)
+          aws ecr get-login-password | docker login --username AWS --password-stdin $ECR_REGISTRY
+  
 
       - name: Tag and Push image
         run: |
@@ -37,4 +40,9 @@ jobs:
         run: aws eks update-kubeconfig --region $AWS_REGION --name $EKS_CLUSTER_NAME
 
       - name: Deploy to EKS
-        run: kubectl apply -f k8s/
+        env:
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+        run: |
+          envsubst < k8s/deployment.yaml | kubectl apply -f -
+          kubectl apply -f k8s/service.yaml
+          kubectl apply -f k8s/ingress.yaml
