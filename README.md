@@ -82,6 +82,8 @@ Tech Stack
 </p>
 
 Author
+
 Sasun Madhuranga
+
 GitHub: https://github.com/sasunmadhuranga
 
