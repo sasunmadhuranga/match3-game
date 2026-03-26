@@ -1,41 +1,79 @@
-Developed and deployed a React-based 2048 game using a fully automated CI/CD pipeline on Amazon Web Services. The application was containerized with Docker and deployed using Amazon Elastic Container Service (ECS) with images stored in Amazon Elastic Container Registry (ECR). Implemented an automated pipeline with AWS CodePipeline and AWS CodeBuild to build, push, and deploy updated container images whenever code changes are pushed to the repository, enabling continuous integration and continuous deployment in a scalable cloud environment.
+Cloud-Native Match-3 Game Deployment on AWS EKS
+This project demonstrates an end-to-end cloud-native deployment of a React-based Match-3 game using modern DevOps practices on AWS.
+The application is containerized using Docker, deployed on a Kubernetes cluster managed by Amazon EKS, and exposed to users via an Application Load Balancer (ALB). A CI/CD pipeline using GitHub Actions automates the build and deployment process.
 
-✅ Developed an interactive 2048 puzzle game using React with responsive UI design.
+Tech Stack
+🔹 Frontend: React
+🔹 Containerization: Docker, Nginx
+🔹 Orchestration: Kubernetes (Amazon EKS)
+🔹 CI/CD: GitHub Actions
+🔹 Cloud Services:
+  - Amazon ECR (Container Registry)
+  - Amazon EKS (Kubernetes)
+  - AWS ALB (Load Balancer)
+  - AWS IAM (Access Control)
+  - AWS VPC (Networking)
+🔹  Helm, eksctl, kubectl
 
-✅ Containerized the React application using Docker for consistent and portable deployment.
+✅ Features
+- Containerized React application using Docker (multi-stage build)
+- Deployed on Kubernetes cluster (EKS) across multiple Availability Zones
+- CI/CD pipeline using GitHub Actions
+- Image storage and management using Amazon ECR
+- Application exposed via AWS ALB using Kubernetes Ingress
+- Secure AWS integration using IAM Roles for Service Accounts (IRSA)
+- High availability through Multi-AZ deployment
+- Real-world troubleshooting and debugging experience
 
-✅ Stored Docker images securely in Amazon Elastic Container Registry (ECR).
+✅  CI/CD Workflow
+1. Code is pushed to GitHub
+2. GitHub Actions workflow is triggered
+3. Docker image is built
+4. Image is pushed to Amazon ECR
+5. Kubernetes deployment is updated
+6. EKS pulls the latest image and updates pods
 
-✅ Deployed the containerized application using Amazon Elastic Container Service (ECS) with Fargate.
+☸️Kubernetes Resources
 
-✅ Implemented a CI/CD pipeline using AWS CodePipeline and AWS CodeBuild to automate build and deployment.
+🔹 Deployment
+  - Manages application pods
+  - Runs multiple replicas for scalability
+🔹 Service
+  - Exposes pods internally within the cluster
 
-✅ Configured automated Docker image builds and pushes to ECR upon source code updates.
+🔹 Ingress
+  - Routes external traffic via ALB
 
-✅ Enabled automatic application updates by redeploying new container versions through the pipeline.
+🌐 Networking & High Availability
+- Deployed across 2 Availability Zones
+- Each AZ uses separate subnets
+- ALB distributes traffic across nodes in different AZs
+- Ensures fault tolerance and high availability
 
-✅ Ensured scalable and reliable cloud deployment using AWS managed services.
+🔐 Security
+- IAM Roles for Service Accounts (IRSA) configured using OIDC
+- Fine-grained permissions for AWS Load Balancer Controller
+- Secure communication between AWS services and Kubernetes
 
-Technologies:
+🟡 Key Learnings
+- Kubernetes requires proper networking (CNI + DNS)
+- AWS integrations depend heavily on IAM and OIDC configuration
+- CI/CD pipelines improve deployment consistency
+- Debugging cloud systems requires isolating issues across layers
+- Multi-AZ architecture improves availability and resilience
 
-🟡 React
 
-🟡 Docker
+📸 Screenshots
+<p>
+    <img scr="screenshots/1.png" width="600"/>
+    <img scr="screenshots/5.png" width="600"/>
+    <img scr="screenshots/6.png" width="600"/>
+    <img scr="screenshots/7.png" width="600"/>
+    <img scr="screenshots/9.png" width="600"/>
+    <img scr="screenshots/10.png" width="600"/>
+</p>
 
-🟡 Amazon ECS (Fargate)
+Author
+Sasun Madhuranga
+GitHub: https://github.com/sasunmadhuranga
 
-🟡 Amazon ECR
-
-🟡 AWS CodeBuild
-
-🟡 AWS CodePipeline
-
-🟡 AWS CLI
-
-🟡 CI/CD
-
-🟡 Containerization
-
-🟡 AWS Cloud
-
-🟡 DevOps
