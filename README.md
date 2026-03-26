@@ -3,16 +3,23 @@ This project demonstrates an end-to-end cloud-native deployment of a React-based
 The application is containerized using Docker, deployed on a Kubernetes cluster managed by Amazon EKS, and exposed to users via an Application Load Balancer (ALB). A CI/CD pipeline using GitHub Actions automates the build and deployment process.
 
 Tech Stack
+
 🔹 Frontend: React
+
 🔹 Containerization: Docker, Nginx
+
 🔹 Orchestration: Kubernetes (Amazon EKS)
+
 🔹 CI/CD: GitHub Actions
+
 🔹 Cloud Services:
+
   - Amazon ECR (Container Registry)
   - Amazon EKS (Kubernetes)
   - AWS ALB (Load Balancer)
   - AWS IAM (Access Control)
   - AWS VPC (Networking)
+
 🔹  Helm, eksctl, kubectl
 
 ✅ Features
@@ -38,6 +45,7 @@ Tech Stack
 🔹 Deployment
   - Manages application pods
   - Runs multiple replicas for scalability
+
 🔹 Service
   - Exposes pods internally within the cluster
 
@@ -65,12 +73,12 @@ Tech Stack
 
 📸 Screenshots
 <p>
-    <img scr="screenshots/1.png" width="600"/>
-    <img scr="screenshots/5.png" width="600"/>
-    <img scr="screenshots/6.png" width="600"/>
-    <img scr="screenshots/7.png" width="600"/>
-    <img scr="screenshots/9.png" width="600"/>
-    <img scr="screenshots/10.png" width="600"/>
+    <img src="screenshots/1.png" width="600"/>
+    <img src="screenshots/5.png" width="600"/>
+    <img src="screenshots/6.png" width="600"/>
+    <img src="screenshots/7.png" width="600"/>
+    <img src="screenshots/9.png" width="600"/>
+    <img src="screenshots/10.png" width="600"/>
 </p>
 
 Author
