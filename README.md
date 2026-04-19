@@ -1,4 +1,5 @@
 Cloud-Native Match-3 Game Deployment on AWS EKS
+
 This project demonstrates an end-to-end cloud-native deployment of a React-based Match-3 game using modern DevOps practices on AWS.
 The application is containerized using Docker, deployed on a Kubernetes cluster managed by Amazon EKS, and exposed to users via an Application Load Balancer (ALB). A CI/CD pipeline using GitHub Actions automates the build and deployment process.
 
