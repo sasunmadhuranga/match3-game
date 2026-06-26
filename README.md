@@ -22,13 +22,13 @@ Tech Stack
 
 🔹  Helm, eksctl, kubectl
 
+
 ## Architecture
 
 <p align="center">
     <img src="screenshots/diagram.png" width="600"/>
 </p>
 
-```
 
 ✅ Features
 - Containerized React application using Docker (multi-stage build)
